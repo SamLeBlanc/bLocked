@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Game</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container" id="rulesCard">
+    <div id="title" style="padding: 1rem 0 0.25rem 0;">bLocked 🤬</div>
+    The next daily word game that is frustrating the nation! 😤😡 
+    <h3><u>Rules</u></h3>
+    <ul>
+      <li>Each puzzle has a <a href="https://en.wikipedia.org/wiki/Word_square#Double_word_squares">double word square</a> solution, forming a 5x5 <i>crossword</i> with no black sqaures.</li>
+      <li>You can move all the letters in a row or column by <b>swiping up, down, left, or right.</b> </li>
+      <li>On a swipe, the last letter will 'overflow' and come back around to the other side.</li> 
+    </ul>
+    <h3><u>Scoring</u></h3>
+    <ul>
+      <li>Letters in a valid word are worth <b>1 point</b>. </li>
+      <li>Letters in both an across and down word are worth <b>2 points!</b></li>
+      <li>All puzzles have a double word square solution, so the <b>max score is 50 points.</b></li>
+    </ul>
+    <button class="button" id="play-button">Play</button>
+  </div>
+  
+  <div class="container" id="game-container">
+    <div id="title">bLocked 🤬</div>
+    <div id="grid"></div>
+    <div id="score">Score: 0</div>
+    <div id="button-container">
+      <button class="button" id="reset-button">Reset</button>
+      <button class="button" id="rules-button">Rules</button>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+  <script src="game.js"></script>
+  <script>
+    const game = new Game();
+    window.game = game;
+    game.initialize();
+  </script>
+</body>
+</html>
