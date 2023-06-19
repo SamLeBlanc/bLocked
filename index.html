@@ -42,6 +42,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
   <script src="game.js"></script>
   <script>
+
+  function setViewHeight() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
+
+  setViewHeight();
+  window.addEventListener('resize', setViewHeight);
+
     const game = new Game();
     window.game = game;
     game.initialize();

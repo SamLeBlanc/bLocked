@@ -4,10 +4,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100); /* Use the custom viewport height here */
   margin: 0;
   background-color: #f0f0f0;
 }
+
 
 #title{
   display: flex;
