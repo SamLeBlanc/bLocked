@@ -487,8 +487,8 @@ class Game {
 
     
 
-    const scoreElement = document.getElementById('score');
-    scoreElement.textContent = `Score: ${this.score}`;
+    const scoreElement = document.getElementById('score-value');
+    scoreElement.textContent = `${this.score}`;
 }
 
 
